@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const rootPath = require('../path');
+const rootPath = require('../rootPath');
 
 // Body parser middleware
 app.use(express.json());

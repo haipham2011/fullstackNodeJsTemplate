@@ -8,12 +8,19 @@ module.exports = {
         path: __dirname,
         filename: 'index.js'
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [
             {
                 test: /\.jsx/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             }
         ]
     }
